@@ -1,4 +1,10 @@
+const superHeroModel = require("../models/SuperHeroModel.js");
+
+
 exports.getAllSuperheroes = (req,res)=>{
+
+
+      //  new superHeroModel(req.body)
 
         res.json({
             message : "Spiderman nno way was an AWESOME MOVIE. YOU SHOULD IT"
@@ -16,6 +22,7 @@ exports.getASuperhero = (req,res)=>{
 
 
 exports.createASuperhero = (req,res)=>{
+
 
     res.json({
         message : "This is a POST Request"
