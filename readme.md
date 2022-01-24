@@ -2,7 +2,7 @@
 
 ## Summary 
 
-This App is a Full-Stack Application build using the MERN (MongoDB, Express, React, Node.js) Stack. 
+A simple RESTful API that allows an administrator to create, read, edit and delete resorts destinations 
 
 ## Production Link : Open [Put Your Hosted Version Link Here]()
 
