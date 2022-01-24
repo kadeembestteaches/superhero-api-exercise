@@ -1,9 +1,13 @@
 const { blanchedalmond } = require("color-name");
 const express = require("express");
-const { ServerDescriptionChangedEvent } = require("mongodb");
 const mongoose = require("mongoose");
 
-require("dotenv").config({path :"config/keys.env"});
+
+if(process.env.NODE_ENV!=="production")
+{
+    require("dotenv").config({path :"config/keys.env"});
+}
+
 
 const superheroController = require("./controllers/SuperHeroController.js");
 const { hydrate } = require("./models/SuperHeroModel.js");
@@ -12,13 +16,10 @@ const { hydrate } = require("./models/SuperHeroModel.js");
 const app = express();
 
 
-
 app.use(express.json());
 
 //superheroes/helloworld
 app.use("/superheroes",superheroController);
-
-
 
 
 const PORT = process.env.PORT;

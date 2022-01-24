@@ -24,7 +24,7 @@ const superheroSchema = new Schema({
             required:true
         }
 
-});
+},{timestamps:true});
 
 
 const superHeroModel = mongoose.model('Superhero', superheroSchema);

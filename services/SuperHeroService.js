@@ -3,7 +3,6 @@ const superHeroModel = require("../models/SuperHeroModel.js");
 
 exports.getAllSuperheroes = (req,res)=>{
 
-
       //  new superHeroModel(req.body)
 
         res.json({
@@ -21,16 +20,15 @@ exports.getASuperhero = (req,res)=>{
 };
 
 
-exports.createASuperhero = (req,res)=>{
-
+exports.createASuperhero = async(req,res)=>{
 
     res.json({
-        message : "This is a POST Request"
+        message : "The Superhero was created successful ",
+       
     })
 
 
 };
-
 
 
 exports.deleteASuperhero = (req,res)=>{
