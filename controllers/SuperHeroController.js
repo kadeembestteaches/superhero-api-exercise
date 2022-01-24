@@ -1,45 +1,20 @@
 const express = require('express')
 const router = express.Router();
 
+const superheroService = require("../services/SuperHeroService.js");
+
 // middleware that is specific to this router
 
 
-router.get("/", (req,res)=>{
+router.get("/", superheroService.getAllSuperheroes);
 
-    res.json({
-        message : "This is a Get Request"
-    })
-})
-router.post("/", (req,res)=>{
-    
-    res.json({
-        message : "This is a POST Request"
-    })
+router.post("/", superheroService.createASuperhero);
 
-})
+router.get("/:id", superheroService.getASuperhero);
 
+router.put("/:id", superheroService.updateASuperhero);
 
-router.get("/:id", (req,res)=>{
-    
-    res.json({
-        message : `This is a get request with the id ${req.params.id}`
-    })
-})
-
-
-router.put("/:id", (req,res)=>{
-    
-    res.json({
-        message : `This is a PUT request with the id ${req.params.id}`
-    })
-})
-
-router.delete("/:id", (req,res)=>{
-    
-    res.json({
-        message : `This is a DELETE request with the id ${req.params.id}`
-    })
-})
+router.delete("/:id", superheroService.deleteASuperhero);
 
 module.exports = router;
 

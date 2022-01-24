@@ -1,0 +1,45 @@
+exports.getAllSuperheroes = (req,res)=>{
+
+        res.json({
+            message : "Spiderman nno way was an AWESOME MOVIE. YOU SHOULD IT"
+        })
+
+};
+
+exports.getASuperhero = (req,res)=>{
+
+    res.json({
+        message : `This is a get request with the id ${req.params.id}`
+    })
+
+};
+
+
+exports.createASuperhero = (req,res)=>{
+
+    res.json({
+        message : "This is a POST Request"
+    })
+
+
+};
+
+
+
+exports.deleteASuperhero = (req,res)=>{
+
+    res.json({
+        message : `This is a DELETE request with the id ${req.params.id}`
+    })
+
+
+};
+
+exports.updateASuperhero = (req,res)=>{
+
+    res.json({
+        message : `This is a PUT request with the id ${req.params.id}`
+    })
+
+
+};
