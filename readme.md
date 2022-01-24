@@ -2,7 +2,7 @@
 
 ## Summary 
 
-A simple RESTful API that allows an administrator to create, read, edit and delete resorts destinations 
+A simple RESTful API that allows an administrator to create, read, edit and delete superheroes destinations 
 
 ## Production Link : Open [Put Your Hosted Version Link Here]()
 
